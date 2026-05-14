@@ -1,0 +1,13 @@
+[package]
+name = "nvme-shim"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "NVMe controller memory model, DMA stubs, and W^X buffer management"
+
+[features]
+default = []
+std = []
+userspace = ["std"]
+
+[dependencies]

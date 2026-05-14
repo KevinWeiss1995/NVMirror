@@ -1,0 +1,12 @@
+[package]
+name = "ebpf-core"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "eBPF ISA definitions, bytecode decoder, and verifier"
+
+[features]
+default = []
+std = []
+
+[dependencies]

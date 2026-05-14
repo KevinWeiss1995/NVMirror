@@ -1,0 +1,29 @@
+[workspace]
+resolver = "2"
+members = [
+    "crates/ebpf-core",
+    "crates/jit-ir",
+    "crates/jit-aarch64",
+    "crates/jit-riscv",
+    "crates/jit-regalloc",
+    "crates/jit-engine",
+    "crates/nvme-shim",
+    "fuzz",
+    "tools/disasm",
+    "tools/bench",
+]
+
+[workspace.package]
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+authors = ["NVMirror Contributors"]
+
+[workspace.dependencies]
+ebpf-core = { path = "crates/ebpf-core" }
+jit-ir = { path = "crates/jit-ir" }
+jit-aarch64 = { path = "crates/jit-aarch64" }
+jit-riscv = { path = "crates/jit-riscv" }
+jit-regalloc = { path = "crates/jit-regalloc" }
+jit-engine = { path = "crates/jit-engine" }
+nvme-shim = { path = "crates/nvme-shim" }

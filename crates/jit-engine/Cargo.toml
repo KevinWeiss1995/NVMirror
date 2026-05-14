@@ -1,0 +1,23 @@
+[package]
+name = "jit-engine"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Orchestrator: decode -> verify -> lower -> allocate -> emit -> finalize"
+
+[features]
+default = ["aarch64", "riscv"]
+std = ["ebpf-core/std", "jit-ir/std", "jit-regalloc/std", "jit-aarch64/std", "jit-riscv/std", "nvme-shim/std"]
+aarch64 = ["jit-aarch64"]
+riscv = ["jit-riscv"]
+
+[dependencies]
+ebpf-core = { workspace = true }
+jit-ir = { workspace = true }
+jit-regalloc = { workspace = true }
+jit-aarch64 = { workspace = true, optional = true }
+jit-riscv = { workspace = true, optional = true }
+nvme-shim = { workspace = true }
+
+[dev-dependencies]
+nvme-shim = { workspace = true, features = ["userspace"] }

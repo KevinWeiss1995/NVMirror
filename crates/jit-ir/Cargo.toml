@@ -1,0 +1,13 @@
+[package]
+name = "jit-ir"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Typed intermediate representation for the eBPF JIT"
+
+[features]
+default = []
+std = []
+
+[dependencies]
+ebpf-core = { workspace = true }

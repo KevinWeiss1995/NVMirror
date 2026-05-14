@@ -1,0 +1,11 @@
+[package]
+name = "nvmirror-fuzz"
+version = "0.1.0"
+edition = "2021"
+publish = false
+
+[dependencies]
+ebpf-core = { path = "../crates/ebpf-core", features = ["std"] }
+jit-engine = { path = "../crates/jit-engine", features = ["std"] }
+jit-ir = { path = "../crates/jit-ir" }
+nvme-shim = { path = "../crates/nvme-shim", features = ["userspace"] }

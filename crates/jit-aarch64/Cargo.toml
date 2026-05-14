@@ -1,0 +1,15 @@
+[package]
+name = "jit-aarch64"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "AArch64 code emitter for the eBPF JIT"
+
+[features]
+default = []
+std = []
+
+[dependencies]
+ebpf-core = { workspace = true }
+jit-ir = { workspace = true }
+jit-regalloc = { workspace = true }

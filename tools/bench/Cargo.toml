@@ -1,0 +1,10 @@
+[package]
+name = "nvmirror-bench"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Microbenchmarks (cycles/instruction)"
+
+[dependencies]
+jit-engine = { workspace = true, features = ["std"] }
+ebpf-core = { workspace = true, features = ["std"] }

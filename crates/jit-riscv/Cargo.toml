@@ -1,0 +1,15 @@
+[package]
+name = "jit-riscv"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "RISC-V RV64IMC code emitter for the eBPF JIT"
+
+[features]
+default = []
+std = []
+
+[dependencies]
+ebpf-core = { workspace = true }
+jit-ir = { workspace = true }
+jit-regalloc = { workspace = true }

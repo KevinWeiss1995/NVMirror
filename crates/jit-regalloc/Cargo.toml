@@ -1,0 +1,14 @@
+[package]
+name = "jit-regalloc"
+version.workspace = true
+edition.workspace = true
+license.workspace = true
+description = "Register allocator with fixed mapping and linear-scan spill fallback"
+
+[features]
+default = []
+std = []
+
+[dependencies]
+ebpf-core = { workspace = true }
+jit-ir = { workspace = true }
