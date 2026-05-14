@@ -3,10 +3,13 @@ name = "nvmirror-disasm"
 version.workspace = true
 edition.workspace = true
 license.workspace = true
-description = "Disassembler for JIT output (debugging)"
+description = "Pipeline visualizer and disassembler for inspecting JIT compilation stages"
 
 [dependencies]
-ebpf-core = { workspace = true }
+ebpf-core = { workspace = true, features = ["std"] }
 jit-ir = { workspace = true }
 jit-aarch64 = { workspace = true }
 jit-riscv = { workspace = true }
+jit-regalloc = { workspace = true }
+jit-engine = { workspace = true, features = ["std"] }
+nvme-shim = { workspace = true, features = ["userspace"] }
